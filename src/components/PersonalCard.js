@@ -1,30 +1,27 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import clsx from 'clsx';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
-import Collapse from '@material-ui/core/Collapse';
-import Avatar from '@material-ui/core/Avatar';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
-import { red } from '@material-ui/core/colors';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
-import ResumeSummary from './ResumeSummary.js'
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import TelegramIcon from '@material-ui/icons/Telegram';
-import MailIcon from '@material-ui/icons/Mail';
-import PhoneIcon from '@material-ui/icons/Phone';
-import Grid from '@material-ui/core/Grid';
-import Link from '@material-ui/core/Link';
-import Box from '@material-ui/core/Box';
-
+import Avatar from "@material-ui/core/Avatar";
+import Box from "@material-ui/core/Box";
+import Card from "@material-ui/core/Card";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import CardHeader from "@material-ui/core/CardHeader";
+import CardMedia from "@material-ui/core/CardMedia";
+import Collapse from "@material-ui/core/Collapse";
+import { red } from "@material-ui/core/colors";
+import Grid from "@material-ui/core/Grid";
+import IconButton from "@material-ui/core/IconButton";
+import Link from "@material-ui/core/Link";
+import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import MailIcon from "@material-ui/icons/Mail";
+import MoreVertIcon from "@material-ui/icons/MoreVert";
+import PhoneIcon from "@material-ui/icons/Phone";
+import TelegramIcon from "@material-ui/icons/Telegram";
+import clsx from "clsx";
+import { MDXRenderer } from "gatsby-plugin-mdx";
+import React from "react";
+import ResumeSummary from "./ResumeSummary.js";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,17 +29,17 @@ const useStyles = makeStyles((theme) => ({
   },
   media: {
     height: 0,
-    paddingTop: '100%', // 16:9
+    paddingTop: "100%", // 16:9
   },
   expand: {
-    transform: 'rotate(0deg)',
-    marginLeft: '0%',
-    transition: theme.transitions.create('transform', {
+    transform: "rotate(0deg)",
+    marginLeft: "0%",
+    transition: theme.transitions.create("transform", {
       duration: theme.transitions.duration.shortest,
     }),
   },
   expandOpen: {
-    transform: 'rotate(180deg)',
+    transform: "rotate(180deg)",
   },
   avatar: {
     backgroundColor: red[500],
@@ -56,7 +53,7 @@ export default function PersonalCard() {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-  const summary = ResumeSummary()[0].node
+  const summary = ResumeSummary()[0].node;
   return (
     <Card className={classes.root}>
       <CardHeader
@@ -70,9 +67,11 @@ export default function PersonalCard() {
             <MoreVertIcon />
           </IconButton>
         }
-        title={<div>
-        <Typography variant="h6"> Anton Bakuteev </Typography>
-        </div>}
+        title={
+          <div>
+            <Typography variant="h6"> Anton Bakuteev </Typography>
+          </div>
+        }
         // subheader="September 14, 2016"
       />
       <CardMedia
@@ -86,43 +85,49 @@ export default function PersonalCard() {
         </Typography>
         {/* <PersonalInfoTable/> */}
       </CardContent>
-      <CardActions >
-      <Box  mr={"10%"} mb={"-2%"} ml={"5%"}>
-        <Typography variant="body1" color="textSecondary" >
-          <Grid container spacing={1}>
+      <CardActions>
+        <Box mr={"10%"} mb={"-2%"} ml={"5%"}>
+          <Typography variant="body1" color="textSecondary">
+            <Grid container spacing={1}>
               <Grid item xs={1} xm={1}>
-                  <LinkedInIcon /> 
+                <LinkedInIcon />
               </Grid>
-              <Grid item xm={5} xs={11}> 
-                <Box  ml={"5%"}>
-                  <Link href='https://www.linkedin.com/in/anton-bakuteyev/'>anton-bakuteyev</Link>
+              <Grid item xm={5} xs={11}>
+                <Box ml={"5%"}>
+                  <Link href="https://www.linkedin.com/in/anton-bakuteyev/">
+                    anton-bakuteyev
+                  </Link>
                 </Box>
-              </Grid> 
+              </Grid>
 
               <Grid item xs={1} xm={1}>
                 <MailIcon />
               </Grid>
-              <Grid item xm={5} xs={11}> 
-                <Box  ml={"5%"}>
-                  <Link href='mailto:bakuteyev@gmail.com'>bakuteyev@gmail.com</Link>
+              <Grid item xm={5} xs={11}>
+                <Box ml={"5%"}>
+                  <Link href="mailto:bakuteyev@gmail.com">
+                    bakuteyev@gmail.com
+                  </Link>
                 </Box>
               </Grid>
 
               <Grid item xs={1} xm={1}>
                 <TelegramIcon />
               </Grid>
-              <Grid item xm={5} xs={11}> 
-                <Box  ml={"5%"}>
-                  <Link href='https://telegram.me/anton_bakuteev'>@anton_bakuteev</Link>
+              <Grid item xm={5} xs={11}>
+                <Box ml={"5%"}>
+                  <Link href="https://telegram.me/anton_bakuteev">
+                    @anton_bakuteev
+                  </Link>
                 </Box>
               </Grid>
 
               <Grid item xs={1} xm={1}>
-                <PhoneIcon /> 
+                <PhoneIcon />
               </Grid>
-              <Grid item xm={4} xs={10}> 
-                <Box  ml={"5%"}>
-                  <Link href='tel:+79657613391'>+79657613391</Link>
+              <Grid item xm={4} xs={10}>
+                <Box ml={"5%"}>
+                  <Link href="tel:+79657613391">+79657613391</Link>
                 </Box>
               </Grid>
 
@@ -138,17 +143,15 @@ export default function PersonalCard() {
                   <ExpandMoreIcon />
                 </IconButton>
               </Grid>
-          </Grid>
-        </Typography>
-      </Box>
-        
+            </Grid>
+          </Typography>
+        </Box>
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography paragraph>
-              <MDXRenderer>{summary.body}</MDXRenderer>
+            <MDXRenderer>{summary.body}</MDXRenderer>
           </Typography>
-         
         </CardContent>
       </Collapse>
     </Card>

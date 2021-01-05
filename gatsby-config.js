@@ -1,13 +1,13 @@
 module.exports = {
   siteMetadata: {
     title: `Anton-Bakuteev-Site`,
+    yandex_verification: "c74e2b351515419a",
   },
   plugins: [
-    
     `gatsby-plugin-mdx`,
-    'gatsby-theme-material-ui',
+    "gatsby-theme-material-ui",
     `gatsby-remark-images`,
-    'gatsby-plugin-sharp',
+    "gatsby-plugin-sharp",
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
@@ -56,9 +56,6 @@ module.exports = {
       },
     },
 
-
-
-
-    
-  ]
+    `gatsby-plugin-react-helmet`,
+  ],
 };

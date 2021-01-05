@@ -1,10 +1,10 @@
-import React from "react"
-import { graphql } from "gatsby"
-import { MDXProvider } from "@mdx-js/react"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import { Link } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
+import { MDXProvider } from "@mdx-js/react";
+import { MDXRenderer } from "gatsby-plugin-mdx";
+import { Link } from "gatsby";
 
-const shortcodes = { Link } // Provide common components here
+const shortcodes = { Link }; // Provide common components here
 
 export default function PageTemplate({ data: { mdx } }) {
   return (
@@ -14,7 +14,7 @@ export default function PageTemplate({ data: { mdx } }) {
         <MDXRenderer>{mdx.body}</MDXRenderer>
       </MDXProvider>
     </div>
-  )
+  );
 }
 
 export const pageQuery = graphql`
@@ -27,4 +27,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

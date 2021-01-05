@@ -1,11 +1,5 @@
-import React from 'react';
-import SimpleTabs from '../components/Tabs';
-
-
-
-
-
-
+import React from "react";
+import SimpleTabs from "../components/Tabs";
 export default function Index() {
-  return (<SimpleTabs/>)
+  return <SimpleTabs />;
 }

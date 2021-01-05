@@ -21,7 +21,7 @@
     "markdown-to-jsx": "^7.1.0",
     "react": "latest",
     "react-dom": "latest",
-    "react-helmet": "latest"
+    "react-helmet": "^6.1.0"
   },
   "scripts": {
     "develop": "gatsby develop",
