@@ -7,23 +7,39 @@ import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import React from "react";
 import Navigation from "./Navigation";
+import Card from '@material-ui/core/Card';
+import Box from '@material-ui/core/Box';
 
+import { makeStyles } from '@material-ui/core/styles';
+const useStyles = makeStyles((theme) => ({
+  root: {
+    paddingTop:20,
+    paddingBottom:20,
+    [theme.breakpoints.down('xs')]: {
+      paddingLeft: 0,
+      paddingRight: 0,
+    },
+    [theme.breakpoints.up('sm')]: {
+      paddingLeft: theme.spacing(4),
+      paddingRight: theme.spacing(4)
+    },
+    [theme.breakpoints.up('md')]: {
+      paddingLeft: theme.spacing(12),
+      paddingRight: theme.spacing(12)
+    }
+  },
+}));
 
 
 export default function PageTemplate({ data: { mdx } }) {
+  const classes = useStyles();
   return (
     <div>
       <Navigation />
       <div
-        style={{
-          paddingLeft: "8%",
-          paddingRight: "8%",
-          paddingTop: 25,
-          paddingBottom: 25,
-        }}
+        className={classes.root}
       >
-        <Container>
-          <Paper>
+          <Card>
             <CardContent>
               <div style={{ padding: "2%" }}>
                 <Typography component="h2" variant="h5">
@@ -65,8 +81,7 @@ export default function PageTemplate({ data: { mdx } }) {
                 </MDXProvider>
               </div>
             </CardContent>
-          </Paper>
-        </Container>
+          </Card>
       </div>
     </div>
   );
