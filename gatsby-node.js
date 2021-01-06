@@ -4,26 +4,39 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
   const result = await graphql(`
     query {
-      allMdx {
-        edges {
-          node {
-            id
-            frontmatter {
-              slug
-              date
+        allMdx {
+            edges {
+              node {
+                id
+                frontmatter {
+                  slug
+                  date
+                }
+              }
             }
           }
-        }
-      }
+          
+          allMarkdownRemark(
+            sort: { order: DESC, fields: [frontmatter___date] }
+            limit: 1000
+          ) {
+            edges {
+              node {
+                frontmatter {
+                  slug
+                }
+              }
+            }
+          }
     }
   `);
   if (result.errors) {
     reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query');
   }
   // Create blog post pages.
-  const posts = result.data.allMdx.edges;
+  const postsMdx = result.data.allMdx.edges;
   // you'll call `createPage` for each result
-  posts.forEach(({ node }, index) => {
+  postsMdx.forEach(({ node }, index) => {
     createPage({
       // This is the slug you created before
       // (or `node.frontmatter.slug`)
@@ -35,4 +48,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       context: { id: node.id },
     });
   });
+
+  const blogPostTemplate = require.resolve(`./src/templates/blogTemplate.js`)
+
+  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: node.frontmatter.slug,
+      component: blogPostTemplate,
+      context: {
+        // additional data can be passed via context
+        slug: node.frontmatter.slug,
+      },
+    })
+  })
 };

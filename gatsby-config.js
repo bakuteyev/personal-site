@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Anton-Bakuteev-Site`,
     yandex_verification: "c74e2b351515419a",
+    siteUrl: 'https://bakuteev.website.yandexcloud.net'
   },
   plugins: [
     `gatsby-plugin-mdx`,
@@ -57,5 +58,29 @@ module.exports = {
     },
 
     `gatsby-plugin-react-helmet`,
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/content/markdown`,
+      },
+    },
+
+    `gatsby-transformer-remark`,
+
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: `${__dirname}/static/images/favicon.svg`
+      },
+    },
+
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        exclude: ['/resume/*', '/example'],
+      },
+    }
   ],
 };
