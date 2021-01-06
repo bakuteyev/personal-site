@@ -12,8 +12,8 @@ import Skills from "./Skills";
 const showPosts = (posts) => (
   <div>
     {posts.map(({ node: post }) => (
-      <Grid item>
-        <div key={post.id} style={{ padding: 10, width: "100%" }}>
+      <Grid  item key={post.id}>
+        <div  style={{ padding: 10, width: "100%" }}>
           <ResumePost post={post} />
         </div>
       </Grid>
@@ -23,9 +23,9 @@ const showPosts = (posts) => (
 
 export default function ResumeTab() {
   return (
-    <Box mx={"auto"}>
+    <Box mx={"auto"} mt={2}>
       <Grid container item spacing={3}>
-        <Grid item sm={0} lg={1} xl={1} md={1} xs={0}></Grid>
+        <Grid item  lg={1} xl={1} md={1} ></Grid>
 
         <Grid item sm={5} lg={3} xl={3} md={3} xs={12}>
           <Grid container item spacing={2}>
@@ -66,7 +66,7 @@ export default function ResumeTab() {
           </Grid>
         </Grid>
 
-        <Grid item sm={0} lg={1} xl={1} md={1} xs={0}></Grid>
+        <Grid item lg={1} xl={1} md={1} ></Grid>
       </Grid>
     </Box>
   );

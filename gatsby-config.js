@@ -79,7 +79,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
-        exclude: ['/resume/*', '/example'],
+        exclude: ['/resume/*'],
       },
     }
   ],

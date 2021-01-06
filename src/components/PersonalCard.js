@@ -87,7 +87,7 @@ export default function PersonalCard() {
       </CardContent>
       <CardActions>
         <Box mr={"10%"} mb={"-2%"} ml={"5%"}>
-          <Typography variant="body1" color="textSecondary">
+          <Typography variant="body1" color="textSecondary" component="div">
             <Grid container spacing={1}>
               <Grid item xs={1} xm={1}>
                 <LinkedInIcon />
@@ -149,9 +149,9 @@ export default function PersonalCard() {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>
+          {/* <Typography> */}
             <MDXRenderer>{summary.body}</MDXRenderer>
-          </Typography>
+          {/* </Typography> */}
         </CardContent>
       </Collapse>
     </Card>

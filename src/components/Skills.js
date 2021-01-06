@@ -60,7 +60,7 @@ export default function Skills() {
   return (
     <div className={classes.root}>
       {skills.map((skill) => (
-        <Chip label={skill} />
+        <Chip label={skill} key={skill} />
       ))}
     </div>
   );

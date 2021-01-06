@@ -35,7 +35,6 @@ const useStyles = makeStyles((theme) => ({
     transform: "rotate(180deg)",
   },
 
-  titleTypographyProps: { variant: "h1" },
 }));
 
 export default function ResumePost(props) {
@@ -53,7 +52,6 @@ export default function ResumePost(props) {
         avatar={
           <Avatar className={classes.avatar} src={post.frontmatter.image} />
         }
-        titleTypographyProps={classes.titleTypographyProps}
         title={
           <div>
             <Typography variant="h6"> {post.frontmatter.title} </Typography>
@@ -101,7 +99,7 @@ export default function ResumePost(props) {
       <div className={classes.cardDetails}>
         <Collapse in={expanded} timeout="auto" unmountOnExit>
           <Box mr={2} ml={2}>
-            <Typography variant="body1" paragraph>
+            <Typography variant="body1" component='span'>
               <MDXRenderer>{post.body}</MDXRenderer>
             </Typography>
           </Box>

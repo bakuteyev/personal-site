@@ -1,12 +1,11 @@
 import React from "react";
-import BlogTab from "../components/BlogTab";
+import ResumeTab from "../components/ResumeTab";
 import Navigation from '../components/Navigation';
 
-
-export default function Index() {
+export default function Contacts() {
   return (<div>
             <Navigation/>
-            <BlogTab />
+            <ResumeTab />
           </div>);
 }
 
