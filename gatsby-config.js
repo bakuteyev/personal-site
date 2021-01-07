@@ -1,8 +1,10 @@
+const URL = 'https://bakuteev.website.yandexcloud.net';
+
 module.exports = {
   siteMetadata: {
     title: `Anton-Bakuteev-Site`,
     yandex_verification: "c74e2b351515419a",
-    siteUrl: 'https://bakuteev.website.yandexcloud.net'
+    siteUrl: URL
   },
   plugins: [
     `gatsby-plugin-mdx`,
@@ -81,6 +83,16 @@ module.exports = {
       options: {
         exclude: ['/resume/*', '/example'],
       },
+    },
+
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: URL,
+        sitemap: `${URL}/sitemap.xml`,
+        policy: [{ userAgent: '*'}]
+      }
     }
+
   ],
 };
