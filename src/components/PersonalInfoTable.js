@@ -20,6 +20,7 @@ function createData(name, calories, fat, carbs, protein) {
 
 const rows = [
   createData('Name', 'Anton Bakuteev'),
+  createData('Russian', 'Антон Бакутеев'),
   createData('Job',  'Data Scientist'),
   createData('Gender', 'Male'),
   createData('Born', 'September 11, 1993'),
