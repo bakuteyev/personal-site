@@ -4,6 +4,7 @@ module.exports = {
   siteMetadata: {
     title: `Anton-Bakuteev-Site`,
     yandex_verification: "c74e2b351515419a",
+    google_site_verification: "1OZEYXhJ_S3WRphYLH2_76DKwKl4oP2tAx1qYBXVCBQ",
     siteUrl: URL
   },
   plugins: [
