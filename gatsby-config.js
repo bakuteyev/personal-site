@@ -95,7 +95,14 @@ module.exports = {
       }
     },
 
-    `gatsby-plugin-preact`
+    `gatsby-plugin-preact`,
+    // {
+    //   resolve: 'gatsby-plugin-webpack-bundle-analyzer',
+    //   options: {
+    //     analyzerPort: 3000,
+    //     production: true,
+    //   },
+    // },
 
   ],
 };
