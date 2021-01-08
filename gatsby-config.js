@@ -93,7 +93,9 @@ module.exports = {
         sitemap: `${URL}/sitemap.xml`,
         policy: [{ userAgent: '*', allow: '/'}]
       }
-    }
+    },
+
+    `gatsby-plugin-preact`
 
   ],
 };
