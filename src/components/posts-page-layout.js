@@ -47,7 +47,7 @@ export default function PageTemplate({ data: { mdx } }) {
                   variant="subtitle1"
                   color="textSecondary"
                 >
-                  {mdx.frontmatter.date }
+                  {mdx.frontmatter.date }, Anton Bakuteev 
                 </Typography>
                 <MDXProvider
                   components={{
