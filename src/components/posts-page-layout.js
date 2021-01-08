@@ -7,6 +7,8 @@ import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import React from "react";
 import Navigation from "./Navigation";
+import SEO from "./seo";
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,6 +34,7 @@ export default function PageTemplate({ data: { mdx } }) {
   const classes = useStyles();
   return (
     <div>
+      <SEO title={mdx.frontmatter.title} description={mdx.excerpt} image={mdx.frontmatter.image}/>
       <Navigation />
       <div
         className={classes.root}
