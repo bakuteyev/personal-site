@@ -96,6 +96,12 @@ module.exports = {
     },
 
     `gatsby-plugin-preact`,
+    {
+      resolve: 'gatsby-plugin-zopfli',
+      options: {
+        extensions: ['css', 'html', 'js', 'svg']
+      }
+    }
     // {
     //   resolve: 'gatsby-plugin-webpack-bundle-analyzer',
     //   options: {

@@ -20,6 +20,7 @@
     "gatsby-plugin-sitemap": "^2.10.0",
     "gatsby-plugin-webpack-bundle-analyzer": "^1.0.5",
     "gatsby-plugin-yandex-metrika": "^2.5.0",
+    "gatsby-plugin-zopfli": "^2.0.0",
     "gatsby-remark-images": "^3.8.1",
     "gatsby-source-filesystem": "^2.8.1",
     "gatsby-theme-material-ui": "latest",
