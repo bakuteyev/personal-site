@@ -92,9 +92,11 @@ export const pageQuery = graphql`
     mdx(id: { eq: $id }) {
       id
       body
+      excerpt
       frontmatter {
         title
         date
+        image
       }
     }
   }

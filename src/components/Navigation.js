@@ -8,9 +8,9 @@ export default function Navigation() {
   return (
     <div>
       <AppBar position="static">
-        <Tabs>
-          <Tab label="Blog" onClick={() => navigate("/")} />
-          <Tab label="Contacts" onClick={() => navigate("/contacts")} />
+        <Tabs value={0}>
+          <Tab label="Blog" value={0} onClick={() => navigate("/")} />
+          <Tab label="Contacts" value={0} onClick={() => navigate("/contacts")} />
         </Tabs>
       </AppBar>
     </div>
