@@ -79,7 +79,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        icon: `${__dirname}/static/images/favicon.svg`
+        icon: `${__dirname}/static/images/favicon.svg`,
+        display: `standalone`
       },
     },
 
@@ -98,6 +99,7 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/'}]
       }
     },
+    `gatsby-plugin-offline`,
 
   
       
