@@ -17,6 +17,8 @@ export default function Skills() {
   const classes = useStyles();
 
   const skills = [
+    "Apache Spark",
+    "Hadoop",
     "Data Analysis",
     "Data Science",
     "Product Analytics",
@@ -28,13 +30,14 @@ export default function Skills() {
     "Pandas",
     "Numpy",
     "Scikit-Learn",
+    "Catboost",
     "SciPy",
     "Numba",
     "Deep Learning",
     "TensorFlow",
     "Keras",
     "Julia",
-    "Modeling hysical Processes",
+    "Physical Processes Modelling",
     "Agent Based Modeling",
     "Machine Learning",
     "Operations Research",
