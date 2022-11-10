@@ -111,26 +111,18 @@ export default function PersonalCard() {
                 </Box>
               </Grid>
 
+         
+
               <Grid item xs={1} xm={1}>
                 <TelegramIcon />
               </Grid>
-              <Grid item xm={5} xs={11}>
+              <Grid item xm={5} xs={10}>
                 <Box ml={"5%"}>
                   <Link href="https://telegram.me/anton_bakuteev">
                     @anton_bakuteev
                   </Link>
                 </Box>
               </Grid>
-
-              <Grid item xs={1} xm={1}>
-                <PhoneIcon />
-              </Grid>
-              <Grid item xm={4} xs={10}>
-                <Box ml={"5%"}>
-                  <Link href="tel:+79657613391">+79657613391</Link>
-                </Box>
-              </Grid>
-
               <Grid item xs={1} xm={1}>
                 <IconButton
                   className={clsx(classes.expand, {
