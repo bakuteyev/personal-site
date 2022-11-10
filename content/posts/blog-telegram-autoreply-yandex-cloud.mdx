@@ -66,7 +66,8 @@ If message in trigger corresponds to stop command it stops instance to save mone
 To make it run in telegram you should create bot and bind it to cloud function via webhook.
 
 ```
-curl -F "url=https://functions.yandexcloud.net/{secret_function_id}" https://api.telegram.org/bot{secret_bot_key}/setWebhook
+curl -F "url=https://functions.yandexcloud.net/{secret_function_id}" \
+https://api.telegram.org/bot{secret_bot_key}/setWebhook
 ```
 <br></br>
 
