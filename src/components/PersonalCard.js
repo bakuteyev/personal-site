@@ -15,13 +15,17 @@ import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import MailIcon from "@material-ui/icons/Mail";
-import MoreVertIcon from "@material-ui/icons/MoreVert";
-import PhoneIcon from "@material-ui/icons/Phone";
+
 import TelegramIcon from "@material-ui/icons/Telegram";
 import clsx from "clsx";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import React from "react";
 import ResumeSummary from "./ResumeSummary.js";
+import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
+
+
+
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -63,8 +67,8 @@ export default function PersonalCard() {
           </Avatar>
         }
         action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
+          <IconButton aria-label="settings" href="https://t.me/SomeTechStuff">
+            <NotificationsActiveIcon />
           </IconButton>
         }
         title={
@@ -78,6 +82,7 @@ export default function PersonalCard() {
         className={classes.media}
         image="/images/I.jpg"
         title="Anton Bakuteev"
+        style={{paddingLeft: '56.25%'}}
       />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
