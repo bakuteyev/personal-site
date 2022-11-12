@@ -10,6 +10,7 @@ import Navigation from "./Navigation";
 import SEO from "./seo";
 
 
+
 const useStyles = makeStyles((theme) => ({
   root: {
     paddingTop:20,
@@ -74,6 +75,9 @@ export default function PageTemplate({ data: { mdx } }) {
                     ),
                     h6: (props) => (
                       <Typography {...props} component="h6" variant="h6" />
+                    ),
+                    li: (props) => (
+                      <Typography {...props} component="li" variant="body1" />
                     ),
                   }}
                 >

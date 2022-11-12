@@ -16,15 +16,17 @@ import Typography from "@material-ui/core/Typography";
 At this moment of time voice assistants are usually not used frequently. Unfortunately, despite great potential main usage scenarios 
 for normal people are:
 
-    1)	Check weather and time
-    2)	Set timer/alarm
-    3)	Manipulate smart devices
+1.	Check weather and time
+2.	Set timer/alarm
+3.	Manipulate smart devices
+
+
 But for blind people they can be much more helpful. In addition to the already listed scenarios blind people also can find 
 the following scenarios also useful:
 
-    4)	Answer the question (as search engine)
-    5)	Read book/play music (podcast)
-    6)	Play games
+4.	Answer the question (as search engine)
+5.	Read book/play music (podcast)
+6.	Play games
 These scenarios are already implemented. But you could notice that there are no scenarios for communication with other people,
  which I would say is very strange.
 
@@ -81,6 +83,7 @@ Like in the previous article you need to create telegram bot with [@BotFather](h
 Assign to variable `bucket_name name` of your Object Storage bucket.
 
 <br></br>
+
 The next very important step is to create a skill for voice assistant. You can do it on 
 [this page](https://dialogs.yandex.ru/developer), just press "Create dialog" button and then "Alice skill". 
 Fill required fields. Their purpose is clear from their description. 
@@ -98,12 +101,12 @@ And that should be the final step of development.
 
 The workflow look like this:
 
-    1) User of voice assistant launches the skill.
-    2) User pronounces message he wants to send to telegram.
-    4) User of voice assistant stops the skill.
-    5) Telegram user receives the message from the bot.
-    6) Telegram user replies to the message in the bot.
-    7) User of the voice assistant launches the skill again and voice assistant pronounces message from the bot.
+1. User of voice assistant launches the skill.
+2. User pronounces message he wants to send to telegram.
+4. User of voice assistant stops the skill.
+5. Telegram user receives the message from the bot.
+6. Telegram user replies to the message in the bot.
+7. User of the voice assistant launches the skill again and voice assistant pronounces message from the bot.
 
 
 <br></br>
