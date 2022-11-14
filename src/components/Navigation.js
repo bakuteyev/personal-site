@@ -4,7 +4,6 @@ import Tabs from "@material-ui/core/Tabs";
 import { navigate } from "gatsby";
 import React from "react";
 import Search from "./Search";
-import Box from "@material-ui/core/Box";
 import { Toolbar } from "@material-ui/core";
 
 export default function Navigation() {

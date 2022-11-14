@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) =>
         },
         inputRoot: {
             color: 'inherit',
-            minWidth: '50ch',
+            // minWidth: '50ch',
         },
         textField: {
             backgroundColor: fade(theme.palette.common.white, 0.15),
@@ -48,18 +48,29 @@ const useStyles = makeStyles((theme) =>
             color: 'inherit',
 
         },
+        bar: {
+            width: '100%', 
+            position: 'relative', 
+            [theme.breakpoints.up('sm')]: {
+                width: '50%',
+            },
+            [theme.breakpoints.down('xs')]: {
+                // backgroundColor: 'red',
+                width: '50%',
+            }
+        },
         inputInput: {
             padding: theme.spacing(1, 1, 1, 0),
-            // vertical padding + font size from searchIcon
+        //     // vertical padding + font size from searchIcon
             paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-            // transition: theme.transitions.create('width'),
-            width: '80ch',
-            [theme.breakpoints.up('sm')]: {
-                width: '120ch',
-                '&:focus': {
-                    width: '80ch',
-                },
-            },
+        //     // transition: theme.transitions.create('width'),
+        //     width: '80ch',
+        //     [theme.breakpoints.up('sm')]: {
+        //         width: '120ch',
+        //         '&:focus': {
+        //             width: '80ch',
+        //         },
+        //     },
         },
     })
 );
@@ -95,7 +106,7 @@ export default function Search() {
 
 
     return (
-        <div style={{ width: '30%', position: 'relative' }}>
+        <div className={classes.bar}>
             <Autocomplete
                 freeSolo
                 id="free-solo-2-demo"
