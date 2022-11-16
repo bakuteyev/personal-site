@@ -15,7 +15,7 @@ const component = {
         theme={github}
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
-          <pre className={className} style={style}>
+          <pre className={className} style={{...style, ...{overflow:'auto'}}}>
             {tokens.map((line, i) => (
               <div {...getLineProps({ line, key: i })}>
                 {line.map((token, key) => (
