@@ -15,7 +15,8 @@ export default function Navigation() {
 
           <Tabs value={false}>
             <Tab label="Blog" value={0} onClick={() => navigate("/")} />
-            <Tab label="Contacts" value={0} onClick={() => navigate("/contacts")} />
+            <Tab label="Projects" value={0} onClick={() => navigate("/projects")} />
+            <Tab label="About Me" value={0} onClick={() => navigate("/contacts")} />
           </Tabs>
           {/* <Box flexGrow={1}></Box> */}
           <Search />

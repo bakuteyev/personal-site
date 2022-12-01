@@ -6,7 +6,7 @@ import SEO from "../components/seo";
 
 export default function Index() {
   return (<div>
-            <SEO/>
+            <SEO title="Blog | Anton Bakuteev"/>
             <Navigation/>
             <BlogTab />
           </div>);
