@@ -21,7 +21,6 @@ import clsx from "clsx";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import React from "react";
 import ResumeSummary from "./ResumeSummary.js";
-import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
 
 
 
@@ -66,11 +65,7 @@ export default function PersonalCard() {
             AB
           </Avatar>
         }
-        action={
-          <IconButton aria-label="settings" href="https://t.me/SomeTechStuff">
-            <NotificationsActiveIcon />
-          </IconButton>
-        }
+       
         title={
           <div>
             <Typography variant="h6"> Anton Bakuteev </Typography>

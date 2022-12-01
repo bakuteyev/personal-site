@@ -8,7 +8,7 @@ import ProjectsContent from "./ProjectsContent";
 const showProjects = (projects) => (
   <Grid container spacing={4}>
     {projects.map(({ node: project }) => (
-    <Grid item xs={12} sm={6} md={4} key={project.frontmatter.slug} >
+    <Grid item xs={12} sm={6} md={3} key={project.frontmatter.slug} >
       <ProjectCard project={project} />
     </Grid>
     ))}
@@ -18,15 +18,15 @@ const showProjects = (projects) => (
 export default function ProjectsTab() {
   return (
     
-    <Box m={2} pt={2}>
+    <Box m={1} pt={1}>
         <Box
           sx={{
             // bgcolor: 'background.paper',
-            pt: 2,
-            pb: 6,
+            pt: 1,
+            pb: 2,
           }}
         >
-          <Container maxWidth="sm">
+          <Container maxWidth="md">
             <Typography
               component="h1"
               variant="h2"
@@ -34,12 +34,10 @@ export default function ProjectsTab() {
               color="text.primary"
               gutterBottom
             >
-              Album layout
+              My Products
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
-              Something short and leading about the collection below—its contents,
-              the creator, etc. Make it short and sweet, but not too short so folks
-              don&apos;t simply skip over it entirely.
+             Completely free. No installation required. Always available.
             </Typography>
             {/* <Stack
               sx={{ pt: 4 }}
@@ -49,7 +47,7 @@ export default function ProjectsTab() {
             > */}
           </Container>
         </Box>
-      <Container sx={{ py: 8 }} maxWidth="md">
+      <Container sx={{ py: 8 }} maxWidth="lg">
           <ProjectsContent showFunc={showProjects} />
         
       
