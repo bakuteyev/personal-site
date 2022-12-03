@@ -1,3 +1,4 @@
+import { Container, Paper } from "@material-ui/core";
 import Avatar from "@material-ui/core/Avatar";
 import Box from "@material-ui/core/Box";
 import Card from "@material-ui/core/Card";
@@ -20,19 +21,20 @@ import TelegramIcon from "@material-ui/icons/Telegram";
 import clsx from "clsx";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import React from "react";
-import ResumeSummary from "./ResumeSummary.js";
-
-
 
 
 
 const useStyles = makeStyles((theme) => ({
   root: {
     // maxWidth: 345,
+    display: "flex",
+
   },
   media: {
-    height: 0,
-    paddingTop: "100%", // 16:9
+    // height: '100%',
+    height: 140,
+    // paddingTop: "100%", // 16:9
+    width: 140,
   },
   expand: {
     transform: "rotate(0deg)",
@@ -40,6 +42,9 @@ const useStyles = makeStyles((theme) => ({
     transition: theme.transitions.create("transform", {
       duration: theme.transitions.duration.shortest,
     }),
+  },
+  cardDetails: {
+    flex: 1,
   },
   expandOpen: {
     transform: "rotate(180deg)",
@@ -49,103 +54,95 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function PersonalCard() {
+export default function PersonalCard(props) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-  const summary = ResumeSummary()[0].node;
+  const { summary } = props;
+
   return (
     <Card className={classes.root}>
-      <CardHeader
-        avatar={
-          <Avatar aria-label="recipe" className={classes.avatar}>
-            AB
-          </Avatar>
-        }
-       
-        title={
-          <div>
-            <Typography variant="h6"> Anton Bakuteev </Typography>
-          </div>
-        }
-        // subheader="September 14, 2016"
-      />
-      <CardMedia
-        className={classes.media}
-        image="/images/I.jpg"
-        title="Anton Bakuteev"
-        style={{paddingLeft: '56.25%'}}
-      />
-      <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
-          {summary.excerpt}
-        </Typography>
-        {/* <PersonalInfoTable/> */}
-      </CardContent>
-      <CardActions>
-        <Box mr={"10%"} mb={"-2%"} ml={"5%"}>
-          <Typography variant="body1" color="textSecondary" component="div">
-            <Grid container spacing={1}>
-              <Grid item xs={1} xm={1}>
-                <LinkedInIcon />
-              </Grid>
-              <Grid item xm={5} xs={11}>
-                <Box ml={"5%"}>
-                  <Link href="https://www.linkedin.com/in/anton-bakuteyev/">
-                    anton-bakuteyev
+
+
+      <Box sx={{ display: 'flex', flexDirection: 'column' }} mb={-1} mt={-1} ml={-1}>
+        <CardHeader
+          title={
+            <div>
+              <Typography variant="h5"> {summary.frontmatter.title}</Typography>
+            </div>
+          }
+          avatar={<Avatar src={summary.frontmatter.image} className={classes.media} variant='rounded' />}
+          subheader={
+            <Box >
+              <Typography variant="h6" >
+                {summary.frontmatter.position}
+              </Typography>
+              <Typography variant="body1" component="div" color="textPrimary">
+                {summary.excerpt}
+              </Typography>
+
+              <Box sx={{ display: 'flex', alignItems: 'center' }}  mb={-1}>
+                <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                  <LinkedInIcon />
+                  <Link href={`https://www.linkedin.com/in/${summary.frontmatter.linkedin_login}/`}>
+                    {summary.frontmatter.linkedin_login}
                   </Link>
                 </Box>
-              </Grid>
 
-              <Grid item xs={1} xm={1}>
-                <MailIcon />
-              </Grid>
-              <Grid item xm={5} xs={11}>
-                <Box ml={"5%"}>
-                  <Link href="mailto:bakuteyev@gmail.com">
-                    bakuteyev@gmail.com
+                <Box ml={"1%"} sx={{ display: 'flex', alignItems: 'center' }}>
+                  <MailIcon />
+                  <Link href={`mailto:${summary.frontmatter.mail}`}>
+                    {summary.frontmatter.mail}
                   </Link>
                 </Box>
-              </Grid>
 
-         
 
-              <Grid item xs={1} xm={1}>
-                <TelegramIcon />
-              </Grid>
-              <Grid item xm={5} xs={10}>
-                <Box ml={"5%"}>
-                  <Link href="https://telegram.me/anton_bakuteev">
-                    @anton_bakuteev
+                <Box ml={"1%"} sx={{ display: 'flex', alignItems: 'center', }}>
+                  <TelegramIcon />
+                  <Link href={`https://telegram.me/${summary.frontmatter.telegram_login}`}>
+                    {summary.frontmatter.telegram_login}
                   </Link>
                 </Box>
-              </Grid>
-              <Grid item xs={1} xm={1}>
+                <Box flexGrow={1}></Box>
+
+                <Box sx={{ display: 'flex', alignItems: 'center'}} mt={1} mr={-8}>
                 <IconButton
-                  className={clsx(classes.expand, {
-                    [classes.expandOpen]: expanded,
-                  })}
-                  onClick={handleExpandClick}
-                  aria-expanded={expanded}
-                  aria-label="show more"
-                >
-                  <ExpandMoreIcon />
-                </IconButton>
-              </Grid>
-            </Grid>
-          </Typography>
-        </Box>
-      </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-          {/* <Typography> */}
-            <MDXRenderer>{summary.body}</MDXRenderer>
-          {/* </Typography> */}
-        </CardContent>
-      </Collapse>
+                    className={clsx(classes.expand, {
+                      [classes.expandOpen]: expanded,
+                    })}
+                    onClick={handleExpandClick}
+                    aria-expanded={expanded}
+                    aria-label="show more"
+                  >
+                    <ExpandMoreIcon />
+                  </IconButton>
+                </Box>
+               
+              </Box>
+              
+            </Box>
+            
+          }
+        />
+
+
+
+
+        <div className={classes.cardDetails}>
+          <Collapse in={expanded} timeout="auto" unmountOnExit>
+            <CardContent>
+              <MDXRenderer>{summary.body}</MDXRenderer>
+            </CardContent>
+          </Collapse>
+        </div>
+      </Box>
+
+
+
+
     </Card>
   );
 }

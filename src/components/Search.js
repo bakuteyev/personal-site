@@ -111,7 +111,7 @@ export default function Search() {
                 freeSolo
                 id="free-solo-2-demo"
                 disableClearable
-                onChange={(event, value) => navigate("/" + value.node.frontmatter.slug)}
+                onChange={(event, value) => navigate( value.node.frontmatter.slug)}
                 options={posts}
                 classes={{
                     root: classes.inputRoot,

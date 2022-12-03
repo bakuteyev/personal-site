@@ -2,8 +2,8 @@ const URL = 'https://bakuteev.website.yandexcloud.net';
 
 module.exports = {
   siteMetadata: {
-    title: `Anton Bakuteev Blog`,
-    description: 'This is Anton Bakuteev personal website, blog and resume',
+    title: `SomeTech™`,
+    description: 'Check out SomeTech™ AI products.',
     titleTemplate: "%s | bakuteev.website.yandexcloud.net",
     yandex_verification: "c74e2b351515419a",
     google_site_verification: "LSwzbuihfnoaEBhhRlPf7pDs2My_pCeHCUffeI69Wdk",

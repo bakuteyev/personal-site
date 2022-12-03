@@ -5,7 +5,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import { Link } from 'gatsby';
+import { Link, navigate } from 'gatsby';
 import PropTypes from "prop-types";
 import React from "react";
 import Button from "@material-ui/core/Button";
@@ -55,7 +55,7 @@ export default function ProjectCard(props) {
               </Link> */}
             </CardContent>
             <CardActions>
-                    <Button size="small">Read more...</Button>
+                    <Button size="small" onClick={() => navigate(project.frontmatter.slug)}>Read more...</Button>
                     <Box flexGrow={1}></Box>
 
                     <Button size="small" variant="outlined">Open</Button>

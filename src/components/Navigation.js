@@ -32,9 +32,9 @@ export default function Navigation() {
         <Toolbar widhth='100%' maxWidth={8000}>
 
           <Tabs value={false}>
-            <Tab label="Blog" value={0} onClick={() => navigate("/")} />
-            <Tab label="Products" value={0} onClick={() => navigate("/projects")} />
-            <Tab label="About Me" value={0} onClick={() => navigate("/contacts")} />
+            <Tab label="Products" value={0} onClick={() => navigate("/")} />
+            <Tab label="Blog" value={0} onClick={() => navigate("/blog")} />
+            <Tab label="About Us" value={0} onClick={() => navigate("/contacts")} />
           </Tabs>
           <Search />
           <Box flexGrow={1}></Box>

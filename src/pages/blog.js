@@ -1,16 +1,15 @@
 import React from "react";
-import ProjectsTab from "../components/ProjectsTab";
+import BlogTab from "../components/BlogTab";
+import Copyright from "../components/Copyright";
 import Navigation from '../components/Navigation';
 import SEO from "../components/seo";
-import Copyright from "../components/Copyright";
+
 
 export default function Index() {
   return (<div>
-            <SEO title="Projects | Anton Bakuteev"/>
+            <SEO title="Blog | Anton Bakuteev"/>
             <Navigation/>
-            <ProjectsTab />
+            <BlogTab />
             <Copyright/>
-
           </div>);
 }
-

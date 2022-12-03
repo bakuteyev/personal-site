@@ -1,3 +1,4 @@
+import { Container, Typography } from "@material-ui/core";
 import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
 import React from "react";
@@ -18,7 +19,29 @@ const showPosts = (posts) => (
 
 export default function BlogTab() {
   return (
-    <Box mx={"auto"}>
+    <Box m={1} pt={1}>
+    <Box
+      sx={{
+        // bgcolor: 'background.paper',
+        pt: 1,
+        pb: 2,
+      }}
+    >
+      <Container maxWidth="md">
+        <Typography
+          component="h1"
+          variant="h2"
+          align="center"
+          color="text.primary"
+          gutterBottom
+        >
+          SomeTech™ Blog
+        </Typography>
+        <Typography variant="h5" align="center" color="text.secondary" paragraph>
+          Some Tech ideas for products.
+        </Typography>
+      </Container>
+    </Box>
       <Grid container item spacing={3}>
         <Grid item lg={1} xl={1} md={1} ></Grid>
 

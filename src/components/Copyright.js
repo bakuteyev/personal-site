@@ -10,8 +10,8 @@ export default function Copyright() {
 
         <Typography variant="body2" color="text.secondary" align="center">
                 {'Copyright © '}
-                <Link color="inherit" href="https://bakuteev.website.yandexcloud.net/">
-                Anton Bakuteev
+                <Link color="inherit" href="https://sometech.website.yandexcloud.net/">
+                SomeTech™
                 </Link>{' '}
                 {new Date().getFullYear()}
                 {'.'}
