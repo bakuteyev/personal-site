@@ -1,5 +1,5 @@
 import React from "react";
-import BlogTab from "../components/BlogTab";
+import ResumeTab from "../components/ResumeTab";
 import Navigation from '../components/Navigation';
 import SEO from "../components/seo";
 
@@ -8,7 +8,7 @@ export default function Index() {
   return (<div>
             <SEO/>
             <Navigation/>
-            <BlogTab />
+            <ResumeTab />
           </div>);
 }
 

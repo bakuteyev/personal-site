@@ -52,11 +52,11 @@ const useStyles = makeStyles((theme) =>
             width: '100%', 
             position: 'relative', 
             [theme.breakpoints.up('sm')]: {
-                width: '50%',
+                width: '100%',
             },
             [theme.breakpoints.down('xs')]: {
                 // backgroundColor: 'red',
-                width: '50%',
+                width: '100%',
             }
         },
         inputInput: {

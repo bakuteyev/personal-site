@@ -15,14 +15,13 @@ import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import MailIcon from "@material-ui/icons/Mail";
-
 import TelegramIcon from "@material-ui/icons/Telegram";
 import clsx from "clsx";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import React from "react";
 import ResumeSummary from "./ResumeSummary.js";
 import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
-
+import { Icon } from "@material-ui/core";
 
 
 
@@ -34,6 +33,10 @@ const useStyles = makeStyles((theme) => ({
   media: {
     height: 0,
     paddingTop: "100%", // 16:9
+  },
+
+  sometech: {
+    display: "flex",
   },
   expand: {
     transform: "rotate(0deg)",
@@ -94,6 +97,19 @@ export default function PersonalCard() {
         <Box mr={"10%"} mb={"-2%"} ml={"5%"}>
           <Typography variant="body1" color="textSecondary" component="div">
             <Grid container spacing={1}>
+              <Grid item xs={1} xm={1}>
+              <Icon className={classes.sometech}>
+                <img src="/images/bulb.svg"/>
+              </Icon>
+              </Grid>
+              <Grid item xm={5} xs={11}>
+                <Box ml={"5%"}>
+                  <Link href="https://sometechnologies.com">
+                    sometechnologies.com
+                  </Link>
+                </Box>
+              </Grid>
+
               <Grid item xs={1} xm={1}>
                 <LinkedInIcon />
               </Grid>
